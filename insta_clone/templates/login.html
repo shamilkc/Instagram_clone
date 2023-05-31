@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    Username:<input type="text" name="username"><br><br>
+    Password:<input type="password" name="password"><br><br>
+    <input type="submit" value="Login">
+</form>
+{% endblock %}

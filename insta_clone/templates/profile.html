@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<div style="text-align:center;border:2px solid black">
+    <h1>Profile</h1>
+
+    <div>
+        <div style="">
+            <img src="{{profile.image.url}}" class="rounded"
+                 height="300px" width="300px">
+        </div>
+    </div>
+
+    <div>
+        <h3>{{profile.bio}}</h3>
+        <h3> {{user.username}}</h3>
+        <h3>{{user.first_name}}</h3>
+        <h3>{{user.last_name}}</h3>
+        <h3>{{user.email}}</h3>
+        <a href="{% url 'user-up' user.id %}">Update profile</a>
+
+    </div>
+</div>
+
+{% endblock %}
